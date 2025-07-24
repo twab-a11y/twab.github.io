@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Modern blue theme */
+    --background: 220 30% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Bright blue as primary */
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 30% 8%;
+
+    /* Light blue as secondary */
+    --secondary: 210 100% 70%;
+    --secondary-foreground: 220 30% 8%;
+
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 70%;
+
+    /* Modern accent */
+    --accent: 200 100% 65%;
+    --accent-foreground: 220 30% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
+    --ring: 200 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Modern gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 8%), hsl(210 50% 15%));
+    --gradient-card: linear-gradient(135deg, hsl(220 25% 10%), hsl(220 20% 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(200 100% 60%), hsl(210 100% 70%));
+
+    /* Modern shadows */
+    --shadow-glow: 0 0 20px hsl(200 100% 60% / 0.3);
+    --shadow-modern: 0 4px 20px hsl(200 100% 60% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
