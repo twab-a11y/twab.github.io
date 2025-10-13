@@ -83,22 +83,44 @@
             transform: scale(1.05);
         }
 
-        .shiny-text {
-            font-size: 6rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(90deg, #fff 0%, #fff 40%, #ff6b6b 50%, #fff 60%, #fff 100%);
-            background-size: 200% 100%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shiny 6s linear infinite;
-        }
+        body {
+    background-color: #b30000; /* deep red background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* make the body fill the screen */
+    margin: 0;
+}
 
-        @keyframes shiny {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
+.shiny-text {
+    font-size: 10rem; /* bigger text */
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(
+        90deg,
+        #fff 0%,
+        #fff 40%,
+        #ff4d4d 50%, /* reddish highlight */
+        #fff 60%,
+        #fff 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shiny 6s linear infinite;
+}
+
+/* Animation that moves the light across the text */
+@keyframes shiny {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
 
         .subtitle {
             font-size: 1.5rem;
