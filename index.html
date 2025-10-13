@@ -83,45 +83,47 @@
             transform: scale(1.05);
         }
 
-        body {
-    background-color: #b30000; /* red background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+        .shiny-text {
+            font-size: 6rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #fff 0%, #fff 40%, #ff6b6b 50%, #fff 60%, #fff 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shiny 6s linear infinite;
+        }
 
-.shiny-text {
-    font-size: 12rem; /* bigger text */
-    font-weight: 900;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(
-        90deg,
-        #b30000 0%,     /* red base */
-        #b30000 40%,    /* darker red area */
-        #ffffff 50%,    /* white highlight */
-        #ffcccc 55%,    /* soft red fade */
-        #b30000 60%,    /* red again */
-        #b30000 100%
-    );
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shiny 5s linear infinite;
-}
+        @keyframes shiny {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
 
-/* Shine movement */
-@keyframes shiny {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
-}
+        .subtitle {
+            font-size: 1.5rem;
+            color: #999;
+            margin-bottom: 2rem;
+        }
 
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
 
         .btn-primary {
             background: #dc2626;
